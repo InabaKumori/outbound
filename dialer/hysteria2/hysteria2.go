@@ -57,6 +57,7 @@ func (s *Hysteria2) Dialer(option *dialer.ExtraOption, nextDialer netproxy.Diale
 		User:     s.User,
 		Password: s.Password,
 		IsClient: true,
+		FastOpen: true, 
 	}
 	if header.SNI == "" {
 		header.SNI = s.Server
