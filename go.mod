@@ -1,4 +1,4 @@
-module github.com/daeuniverse/outbound
+module github.com/InabaKumori/outbound
 
 go 1.21.0
 
