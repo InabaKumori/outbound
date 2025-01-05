@@ -40,6 +40,10 @@ func NewDialer(nextDialer netproxy.Dialer, header protocol.Header) (netproxy.Dia
 		config.BandwidthConfig = *feature.(*client.BandwidthConfig)
 	}
 
+
+	config.FastOpen = true
+
+	
 	client, err := client.NewReconnectableClient(
 		func() (*client.Config, error) {
 			serverAddr, err := net.ResolveUDPAddr("udp", header.ProxyAddress)
